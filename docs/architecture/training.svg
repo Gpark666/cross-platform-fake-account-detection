@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img" aria-labelledby="arch-mlp-training-title arch-mlp-training-desc">
+<title id="arch-mlp-training-title">가짜 계정 탐지 · 모델 학습 파이프라인</title>
+<desc id="arch-mlp-training-desc">각 분기의 내부 검증과 외부 플랫폼 평가는 다른 모집단이다. 원본 코드에는 결합 데이터 표준화 후 재분할하는 버전이 있으므로 이 그림이 누수 없는 최종 검증 구성을 뜻하지 않는다. 최종 추론 번들의 배포 완료는 확인되지 않았다.</desc>
+<rect width="1000" height="900" fill="white"/>
+<text x="28" y="31" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="start">가짜 계정 탐지 · 모델 학습 파이프라인</text>
+<text x="28" y="60" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16" font-weight="400" fill="#566570" text-anchor="start">세 개의 실험 분기: 모델 A · 역방향 모델 B · 추가 봇 재학습</text>
+<polyline points="175,220 175,295" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="175.00,295.00 170.83,285.91 179.17,285.91" fill="#536979"/>
+<polyline points="500,220 500,295" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="500.00,295.00 495.83,285.91 504.17,285.91" fill="#536979"/>
+<polyline points="825,220 825,295" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="825.00,295.00 820.83,285.91 829.17,285.91" fill="#536979"/>
+<polyline points="175,440 175,505" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="175.00,505.00 170.83,495.91 179.17,495.91" fill="#536979"/>
+<polyline points="500,440 500,505" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="500.00,505.00 495.83,495.91 504.17,495.91" fill="#536979"/>
+<polyline points="825,440 825,505" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="825.00,505.00 820.83,495.91 829.17,495.91" fill="#536979"/>
+<polyline points="175,655 175,720" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="175.00,720.00 170.83,710.91 179.17,710.91" fill="#536979"/>
+<polyline points="500,655 500,720" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="500.00,720.00 495.83,710.91 504.17,710.91" fill="#536979"/>
+<polyline points="825,655 825,720" fill="none" stroke="#536979" stroke-width="2.1"/>
+<polygon points="825.00,720.00 820.83,710.91 829.17,710.91" fill="#536979"/>
+<rect x="40" y="105" width="270" height="115" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">Instagram 기준 데이터</text>
+<text x="56" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">train.csv + test.csv</text>
+<text x="56" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">fake 타겟 · 프로필 수치</text>
+<rect x="365" y="105" width="270" height="115" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="381" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">X 라벨 계정 데이터</text>
+<text x="381" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">sampled_label → Selenium</text>
+<text x="381" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">x_user_data.csv</text>
+<rect x="690" y="105" width="270" height="115" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="706" y="136" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">추가 봇 데이터</text>
+<text x="706" y="168" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X 계정 + Bot_user_data2</text>
+<text x="706" y="191" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">추가 표본으로 재학습</text>
+<rect x="40" y="295" width="270" height="145" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="56" y="326" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">모델 A 전처리</text>
+<text x="56" y="358" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Instagram 기준 scaler</text>
+<text x="56" y="381" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X에도 같은 변환 적용</text>
+<text x="56" y="404" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">t 검정 · 선택 특성 8개</text>
+<rect x="365" y="295" width="270" height="145" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="381" y="326" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">모델 B 전처리</text>
+<text x="381" y="358" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X 기준 scaler로 두 플랫폼 변환</text>
+<text x="381" y="381" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">활성 선택 특성 6개</text>
+<text x="381" y="404" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">변수명 혼용 수정 필요</text>
+<rect x="690" y="295" width="270" height="145" rx="8" fill="#eff6fa" stroke="#397a99" stroke-width="1.8"/>
+<text x="706" y="326" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">추가 데이터 전처리</text>
+<text x="706" y="358" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X와 봇 표본 결합</text>
+<text x="706" y="381" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">결합 기준 scaler 적합</text>
+<text x="706" y="404" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Instagram 외부 입력 변환</text>
+<rect x="40" y="505" width="270" height="150" rx="8" fill="#f5f2f9" stroke="#8a6fa4" stroke-width="1.8"/>
+<text x="56" y="536" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">모델 A 학습·비교</text>
+<text x="56" y="568" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">GB · RF · LightGBM · XGBoost</text>
+<text x="56" y="591" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">soft voting 앙상블 비교</text>
+<text x="56" y="614" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">내부 80:20 분할 실험</text>
+<rect x="365" y="505" width="270" height="150" rx="8" fill="#f5f2f9" stroke="#8a6fa4" stroke-width="1.8"/>
+<text x="381" y="536" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">모델 B 학습·튜닝</text>
+<text x="381" y="568" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Random Forest GridSearchCV</text>
+<text x="381" y="591" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">voting · 5-fold 검증</text>
+<text x="381" y="614" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">학습 도메인은 X</text>
+<rect x="690" y="505" width="270" height="150" rx="8" fill="#f5f2f9" stroke="#8a6fa4" stroke-width="1.8"/>
+<text x="706" y="536" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">추가 봇 모델 학습</text>
+<text x="706" y="568" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">재학습 모델·voting 평가</text>
+<text x="706" y="591" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">검증 확률 임계값 0.6</text>
+<text x="706" y="614" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">외부 평가는 기본 predict</text>
+<rect x="40" y="720" width="270" height="110" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="56" y="751" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">분리 평가</text>
+<text x="56" y="783" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Instagram 내부 테스트</text>
+<text x="56" y="806" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X 외부 도메인 테스트</text>
+<rect x="365" y="720" width="270" height="110" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="381" y="751" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">분리 평가</text>
+<text x="381" y="783" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">X 내부 검증</text>
+<text x="381" y="806" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Instagram 외부 테스트</text>
+<rect x="690" y="720" width="270" height="110" rx="8" fill="#f0f7f3" stroke="#56866e" stroke-width="1.8"/>
+<text x="706" y="751" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">분리 평가</text>
+<text x="706" y="783" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">추가 표본 내부 검증</text>
+<text x="706" y="806" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">Instagram 외부 테스트</text>
+<rect x="28" y="875" width="17" height="13" fill="#eff6fa" stroke="#397a99"/>
+<text x="54" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">구현 코드</text>
+<rect x="205" y="875" width="17" height="13" fill="#f0f7f3" stroke="#56866e"/>
+<text x="231" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">파일·데이터</text>
+<rect x="405" y="875" width="17" height="13" fill="#f5f2f9" stroke="#8a6fa4"/>
+<text x="431" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">오프라인 학습</text>
+<rect x="635" y="875" width="17" height="13" fill="#fffaf0" stroke="#b7802b" stroke-dasharray="5 3"/>
+<text x="661" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">설계·미연결</text>
+</svg>

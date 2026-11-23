@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img" aria-labelledby="arch-mlp-service-title arch-mlp-service-desc">
+<title id="arch-mlp-service-title">가짜 계정 탐지 · 서비스 연결 설계안</title>
+<desc id="arch-mlp-service-desc">현재 확인된 범위는 데이터 수집·전처리·모델 비교 노트북이다. 점선 영역은 그 결과를 단일 계정 추론으로 확장할 때 필요한 설계이며 구현 완료를 뜻하지 않는다. pred_model.pkl 로드는 FileNotFoundError로 남아 있어 실제 배포 모델로 표시하지 않았다.</desc>
+<rect width="1000" height="900" fill="white"/>
+<text x="28" y="31" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="24" font-weight="700" fill="#000000" text-anchor="start">가짜 계정 탐지 · 서비스 연결 설계안</text>
+<text x="28" y="60" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16" font-weight="400" fill="#566570" text-anchor="start">연구 코드는 확인 · 온라인 서비스와 모델 배포 구현은 확인되지 않음</text>
+<polyline points="310,180 365,180" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="365.00,180.00 355.91,184.17 355.91,175.83" fill="#b7802b"/>
+<polyline points="635,180 690,180" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="690.00,180.00 680.91,184.17 680.91,175.83" fill="#b7802b"/>
+<polyline points="310,472 365,472" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="365.00,472.00 355.91,476.17 355.91,467.83" fill="#b7802b"/>
+<polyline points="635,472 690,472" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="690.00,472.00 680.91,476.17 680.91,467.83" fill="#b7802b"/>
+<polyline points="825,250 825,385" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="825.00,385.00 820.83,375.91 829.17,375.91" fill="#b7802b"/>
+<polyline points="825,560 825,690" fill="none" stroke="#b7802b" stroke-width="2.1" stroke-dasharray="8 6"/>
+<polygon points="825.00,690.00 820.83,680.91 829.17,680.91" fill="#b7802b"/>
+<rect x="40" y="110" width="270" height="140" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="56" y="141" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">계정 입력 진입점</text>
+<text x="56" y="173" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">플랫폼·계정 식별자</text>
+<text x="56" y="196" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">요청 스키마 정의 필요</text>
+<text x="56" y="219" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">서비스 인터페이스는 설계</text>
+<rect x="365" y="110" width="270" height="140" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="381" y="141" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">프로필 특성 구성</text>
+<text x="381" y="173" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">수집 노트북 로직 재사용</text>
+<text x="381" y="196" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">특성명·자료형·결측값 정렬</text>
+<text x="381" y="219" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">실시간 수집 연결은 설계</text>
+<rect x="690" y="110" width="270" height="140" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="706" y="141" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">전처리 번들 적용</text>
+<text x="706" y="173" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">학습 기준 scaler 재사용</text>
+<text x="706" y="196" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">선택 열과 순서를 고정</text>
+<text x="706" y="219" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">플랫폼별 입력 스키마 선택</text>
+<rect x="40" y="385" width="270" height="175" rx="8" fill="#f5f2f9" stroke="#8a6fa4" stroke-width="1.8"/>
+<text x="56" y="416" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">확인된 오프라인 연구</text>
+<text x="56" y="448" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">모델 A: Instagram → X</text>
+<text x="56" y="471" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">모델 B: X → Instagram</text>
+<text x="56" y="494" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">추가 봇 데이터 재학습</text>
+<text x="56" y="517" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">내부·외부 도메인 평가</text>
+<rect x="365" y="385" width="270" height="175" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="381" y="416" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">모델 번들 내보내기</text>
+<text x="381" y="448" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">분류기 + scaler + 특성 목록</text>
+<text x="381" y="471" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">타겟·임계값·버전 메타데이터</text>
+<text x="381" y="494" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">한 묶음으로 저장하는 설계</text>
+<text x="381" y="517" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">최종 배포 번들 확인 안 됨</text>
+<rect x="690" y="385" width="270" height="175" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="706" y="416" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">온라인 추론 실행</text>
+<text x="706" y="448" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">선택한 모델·특성 버전 로드</text>
+<text x="706" y="471" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">predict_proba 또는 predict</text>
+<text x="706" y="494" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">확률과 결정 기준을 분리</text>
+<text x="706" y="517" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">실제 API 구현은 미확인</text>
+<rect x="365" y="690" width="595" height="130" rx="8" fill="#fffaf0" stroke="#b7802b" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="381" y="721" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="700" fill="#000000" text-anchor="start">분류 결과 반환과 해석</text>
+<text x="381" y="753" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">확률 · 적용 임계값 · 예측 라벨 · 모델 버전</text>
+<text x="381" y="776" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">플랫폼 전이 성능을 함께 설명하는 결과 계약을 설계</text>
+<text x="381" y="799" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#1a2832" text-anchor="start">검증 임계값 0.6과 외부 평가의 기본 predict는 서로 구분</text>
+<rect x="777.86328125" y="302" width="94.2734375" height="23" rx="3" fill="white"/>
+<text x="825" y="318" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="15" font-weight="400" fill="#53616d" text-anchor="middle">변환된 입력</text>
+<rect x="28" y="875" width="17" height="13" fill="#eff6fa" stroke="#397a99"/>
+<text x="54" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">구현 코드</text>
+<rect x="205" y="875" width="17" height="13" fill="#f0f7f3" stroke="#56866e"/>
+<text x="231" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">파일·데이터</text>
+<rect x="405" y="875" width="17" height="13" fill="#f5f2f9" stroke="#8a6fa4"/>
+<text x="431" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">오프라인 학습</text>
+<rect x="635" y="875" width="17" height="13" fill="#fffaf0" stroke="#b7802b" stroke-dasharray="5 3"/>
+<text x="661" y="887" font-family="Malgun Gothic,Noto Sans KR,Arial,sans-serif" font-size="14.5" font-weight="400" fill="#1a2832" text-anchor="start">설계·미연결</text>
+</svg>

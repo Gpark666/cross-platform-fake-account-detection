@@ -1,0 +1,10 @@
+﻿new_path,original_filename,purpose,original_modified_kst
+notebooks/01_prepare_instagram_to_x_features.ipynb,combine_table.ipynb,Instagram 학습 기준과 X 변환,2025-06-06T00:06:11+09:00
+notebooks/02_validate_cross_platform_features.ipynb,feature_validate.ipynb,플랫폼과 모델 B별 특성 t 검정,2025-06-01T21:04:00+09:00
+notebooks/04_prepare_x_to_instagram_features.ipynb,mode_B_prepocess_data.ipynb,X 학습 기준으로 플랫폼 변환,2025-06-01T19:13:35+09:00
+notebooks/05_train_x_to_instagram_model.ipynb,mode_b_train&test.ipynb,모델 B 학습과 외부 테스트,2025-06-06T00:41:50+09:00
+notebooks/07_train_bot_augmented_model.ipynb,model_b_prime.ipynb,추가 봇 데이터 모델 B 프라임,2025-06-06T01:27:25+09:00
+notebooks/03_train_instagram_to_x_model.ipynb,model_train_by_selected.ipynb,8개 선택 특성 모델 A 비교,2025-06-01T21:57:12+09:00
+notebooks/06_prepare_bot_augmented_dataset.ipynb,retrain_comb_data.ipynb,추가 봇 데이터 결합과 재학습 입력,2025-06-06T00:35:25+09:00
+notebooks/collection/01_resolve_x_usernames.ipynb,Untitled1.ipynb,라벨 ID에서 사용자명 추출,2025-05-31T13:52:22+09:00
+notebooks/collection/02_collect_x_profiles.ipynb,Untitled2.ipynb,로그인 후 X 데이터 수집,2025-05-31T13:52:22+09:00
